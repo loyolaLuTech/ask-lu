@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>961AC376-5E57-42ED-9D42-3BFC1BA0AEA4</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Ask Lu</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>360C45BE196243EA18E4CAFBDCC474834A25DE80</key>
+		<string>https://github.com/LoyolaUniversityTec/asklu.git</string>
+		<key>F1E819E89E896F7CA04C0A9E81F56DD1DB85FC99</key>
+		<string>https://github.com/LoyolaUniversityTec/AskLu.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Ask Lu.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>360C45BE196243EA18E4CAFBDCC474834A25DE80</key>
+		<string>../../../SlideOutNavigation</string>
+		<key>F1E819E89E896F7CA04C0A9E81F56DD1DB85FC99</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/LoyolaUniversityTec/AskLu.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>F1E819E89E896F7CA04C0A9E81F56DD1DB85FC99</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>F1E819E89E896F7CA04C0A9E81F56DD1DB85FC99</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Ask%20Lu</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>360C45BE196243EA18E4CAFBDCC474834A25DE80</string>
+			<key>IDESourceControlWCCName</key>
+			<string>SlideOutNavigation</string>
+		</dict>
+	</array>
+</dict>
+</plist>
