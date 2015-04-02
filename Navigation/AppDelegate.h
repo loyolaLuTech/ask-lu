@@ -8,7 +8,7 @@
 @property (strong, nonatomic) UIWindow *window;
 
 @property (strong, nonatomic) MainViewController *viewController;
-@property (nonatomic,retain) NSArray *classes;
--(void)saveArray:(NSArray *)array;
+@property (nonatomic,retain) NSMutableArray *classes;
+-(void)saveArray:(NSString *)array;
 @property(nonatomic) BOOL Run;
 @end

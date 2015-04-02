@@ -97,13 +97,55 @@
 {
     [super viewWillAppear:animated];
 }
--(IBAction)selectClasses:(id)sender; {
-    CRTableViewController *tableView = [[CRTableViewController alloc] initWithStyle:UITableViewStylePlain];
+
+
+
+-(IBAction)selectClasses:(id)sender {
+    
+    
+    
+    
+    UIAlertController * alert=   [UIAlertController
+                                  alertControllerWithTitle:@"Class"
+                                  message:@"Ex: 'COMP 180' "
+                                  preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction* ok = [UIAlertAction actionWithTitle:@"Add" style:UIAlertActionStyleDefault
+                                               handler:^(UIAlertAction * action) {
+                                                   //Do Some action here
+                                                   UITextField *textField = alert.textFields[0];
+                                                   NSLog(@"%@", textField.text);
+                                                   
+                                                   AppDelegate *appDelegate =(AppDelegate *)[[UIApplication sharedApplication] delegate];
+                                                   
+                                                   //appDelegate.classes = selectedMarks;
+                                                   
+                                                   [appDelegate saveArray:textField.text];
+                                                   
+                                                   
+                                                   
+                                               }];
+    UIAlertAction* cancel = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDefault
+                                                   handler:^(UIAlertAction * action) {
+                                                       [alert dismissViewControllerAnimated:YES completion:nil];
+                                                   }];
+    
+    [alert addAction:ok];
+    [alert addAction:cancel];
+    
+    [alert addTextFieldWithConfigurationHandler:^(UITextField *textField) {
+        textField.placeholder = @"Class";
+    }];
+   
+    
+    [self presentViewController:alert animated:YES completion:nil];
+    //CRTableViewController *tableView = [[CRTableViewController alloc] initWithStyle:UITableViewStylePlain];
     //CRTableViewController *tableView = [[CRTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
     
-    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:tableView];
+    //UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:tableView];
     
-    [self presentModalViewController:navController animated:YES];
+    //[self presentModalViewController:navController animated:YES];
+    
     
 }
 - (void)viewDidAppear:(BOOL)animated

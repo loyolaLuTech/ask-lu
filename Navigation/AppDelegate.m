@@ -14,8 +14,8 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.viewController = [[MainViewController alloc] initWithNibName:@"MainViewController" bundle:nil];
-    classes = [[NSArray alloc] init];
-    classes = [fetchDefaults objectForKey:@"kKey"];
+    classes = [[NSMutableArray alloc] init];
+    //classes = [fetchDefaults objectForKey:@"kKey"];
     
     ///////
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -55,16 +55,21 @@
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
 }
--(void)saveArray:(NSArray *)array {
-    classes = array;
+-(void)saveArray:(NSString *)array {
     
+    [classes addObject:array];
+    
+    NSLog(@"%@", classes);
+    
+    /*
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
     // To Save A String
-    [defaults setObject:array forKey:@"kKey"];
+    [defaults setObject:classes forKey:@"kKey"];
     
     // Synchronizing the defaults. If you don't do this the defaults may or may not sync.
     [defaults synchronize];
+     */
 }
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
