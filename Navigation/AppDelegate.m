@@ -6,6 +6,8 @@
 
 @implementation AppDelegate
 @synthesize classes;
+@synthesize Run = _Run;
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     NSUserDefaults *fetchDefaults = [NSUserDefaults standardUserDefaults];
@@ -14,6 +16,35 @@
     self.viewController = [[MainViewController alloc] initWithNibName:@"MainViewController" bundle:nil];
     classes = [[NSArray alloc] init];
     classes = [fetchDefaults objectForKey:@"kKey"];
+    
+    ///////
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    if (![defaults objectForKey:@"FR"]){
+        
+        self.Run = TRUE;
+        
+        [defaults setObject:[NSDate date] forKey:@"FR"];
+        
+    }else{
+        
+        self.Run = FALSE;
+    }
+    
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    
+    if (self.Run) {
+        
+        NSLog(@"First Run");
+        
+    } else {
+        
+        NSLog(@"Normal Run");
+        
+    }
+    ///////
+    
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
     return YES;

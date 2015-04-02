@@ -10,4 +10,5 @@
 @property (strong, nonatomic) MainViewController *viewController;
 @property (nonatomic,retain) NSArray *classes;
 -(void)saveArray:(NSArray *)array;
+@property(nonatomic) BOOL Run;
 @end
